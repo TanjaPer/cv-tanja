@@ -244,6 +244,15 @@
         event.currentTarget.classList.add('active-link');
         document.getElementById(tabname).classList.add('active-tab');
       }
+
+      document.querySelectorAll('.work').forEach((card) => {
+        card.addEventListener('touchstart', function () {
+          this.classList.add('hovered');
+        });
+        card.addEventListener('touchend', function () {
+          this.classList.remove('hovered');
+        });
+      });
     </script>
   </body>
 </html>

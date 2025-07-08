@@ -84,7 +84,8 @@ nav ul li a::after {
   transition: 0.5s;
   border-radius: 2px;
 }
-nav ul li a:hover::after {
+nav ul li a:hover::after,
+nav ul li a.hovered::after {
   width: 100%;
 }
 #header-text {
@@ -191,7 +192,6 @@ nav ul li a:hover::after {
   font-size: 24px;
   font-weight: 900;
   position: relative;
-  cursor: pointer;
 }
 
 .tab-links::after {
@@ -216,6 +216,7 @@ nav ul li a:hover::after {
   color: #424141;
   min-width: 0;
   width: fit-content;
+  cursor: pointer;
 }
 .tab-contains ul li span {
   color: #bbb8b8;
@@ -354,9 +355,11 @@ nav ul li a:hover::after {
   margin-top: 20px;
 }
 
+.services-list div:hover,
 .services-list div:hover {
   background: #043938;
   transform: translateY(-10px);
+  cursor: pointer;
 }
 
 /* --------------my work------------- */
@@ -375,6 +378,7 @@ nav ul li a:hover::after {
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 
 .work img {
@@ -443,12 +447,15 @@ nav ul li a:hover::after {
   display: inline-block;
 }
 
-.work:hover img {
+.work:hover img,
+.work.hovered img {
   transform: scale(0.5);
 }
-.work:hover .layer {
+.work:hover .layer,
+.work.hovered .layer {
   height: 100%;
 }
+
 .see-more-btn {
   display: block;
   margin: 50px auto;
@@ -461,6 +468,7 @@ nav ul li a:hover::after {
   transition: transform 0.5s;
 }
 
+.see-more-btn:hover,
 .see-more-btn:hover {
   background: #075b58;
 }
