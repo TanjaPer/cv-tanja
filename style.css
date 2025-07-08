@@ -1,33 +1,60 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   box-sizing: border-box;
 }
 body {
   background: #080808;
   color: white;
+  padding: 0px 10%;
 }
 #header {
+  padding-top: 50px;
   width: 100%;
   height: 100vh;
   background-image: url(images/background-img.jpg);
   background-size: cover;
   background-position: center;
+  border-radius: 0 0 40px 40px;
+  flex-wrap: wrap;
 }
-.container {
-  padding: 10px 10%;
+#header-text h1 {
+  font-size: clamp(32px, 6vw, 48px);
+  font-weight: bold;
+  line-height: 1.2;
+  margin-bottom: 5px;
+  margin-top: 20%;
 }
+
+.dev-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 40px;
+}
+
+.dev-list li {
+  font-size: clamp(10px, 4vw, 26px);
+  margin-bottom: 16px;
+  color: #11c6c0;
+}
+
 nav {
+  position: -webkit-sticky;
+  display: flex;
+
+  top: 0;
+  width: 100%;
+  height: 100px;
+  z-index: 1000;
   display: flex;
   align-items: center;
   justify-content: baseline;
   flex-wrap: wrap;
-  margin-right: 5%;
 }
 .logo {
   width: 15%;
-  height: 20%;
+  height: 70%;
   color: #901818;
 }
 
@@ -45,7 +72,7 @@ nav ul li a {
 }
 
 nav ul li a::after {
-  content: "";
+  content: '';
   width: 0;
   height: 3px;
   background: #484646;
@@ -60,8 +87,8 @@ nav ul li a:hover::after {
 }
 #header-text {
   margin: 3%;
-  margin-top: 70px;
-  padding: 10px 0%;
+  /* margin-top: 70px; */
+  padding: 0px 0%;
   color: #f0f3f9;
   font-size: 20px;
   align-items: center;
@@ -74,7 +101,6 @@ nav ul li a:hover::after {
 }
 
 .silver-text {
-  font-size: 40px;
   background: linear-gradient(180deg, #080808 0%, #ece3e3 90%, #080808 100%);
   background-clip: text;
   -webkit-background-clip: text;
@@ -103,6 +129,9 @@ nav ul li a:hover::after {
 .row-column-2 {
   flex-basis: 60%;
 }
+.row-column-2 h1 {
+  flex-basis: 20px;
+}
 .sub-title {
   color: white;
   margin-bottom: 10px;
@@ -110,7 +139,7 @@ nav ul li a:hover::after {
   font-weight: 600;
 }
 .sub-title::after {
-  content: "";
+  content: '';
   width: 0;
   height: 3px;
   background: #484646;
@@ -124,16 +153,38 @@ nav ul li a:hover::after {
   width: 100%;
 }
 
-.tab-titles {
+#tab-titles {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   gap: 32px;
-  margin: 300px;
+  margin-bottom: 8px;
+  flex-wrap: wrap;
 }
+.tab-section {
+  margin-top: 50px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+#background-img {
+  background-image: url(images/background-img.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  margin: 80px 0;
+  border-radius: 40px;
+}
+#background-img .container {
+  max-width: 1200px;
+  margin: 0 13% 7%;
+  padding: 0 40px;
+}
+
 .tab-links {
   display: inline-block;
   margin-top: 10%;
-  margin-right: 50px;
   color: #c5c3c3;
   font-size: 24px;
   font-weight: 900;
@@ -142,7 +193,7 @@ nav ul li a:hover::after {
 }
 
 .tab-links::after {
-  content: "";
+  content: '';
   width: 0;
   height: 3px;
   background: #10a5a0;
@@ -152,6 +203,47 @@ nav ul li a:hover::after {
   transition: 0.5s;
   border-radius: 2px;
 }
-.tab-links:hover::after {
+
+.tab-links.active-link::after {
   width: 100%;
+}
+.tab-contains ul li {
+  list-style: none;
+  margin: 20px 0;
+  font-size: 18px;
+  color: #424141;
+  min-width: 0;
+  width: fit-content;
+}
+.tab-contains ul li span {
+  color: #3a3939;
+  font-size: 19px;
+}
+.tab-contains {
+  display: none;
+}
+.tab-contains.active-tab {
+  display: block;
+}
+
+.tab-contains ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.job-company,
+.degree,
+.skill-group {
+  font-size: 16px;
+  color: #484646;
+  display: block;
+  margin-bottom: 2px;
+}
+
+.job-dates,
+.school {
+  font-size: 15px;
+  color: #484646;
+  display: block;
 }

@@ -13,25 +13,24 @@
         <nav>
           <img src="images/logo.png" class="logo" />
           <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About Me</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Portfolio</a></li>
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#tab-titles">Experance</a></li>
+            <li><a href="#experance">Portfolio</a></li>
             <li><a href="#">Contact</a></li>
           </ul>
         </nav>
         <div id="header-text">
           <h1>
-            Hi, I'm <span class="silver-text">Tanja</span> Pervan<span
-              class="silver-text"
-              >.</span
-            >
+            Hi, I'm
+            <span class="silver-text">Tanja</span>
+            Pervan
           </h1>
-          <p>
-            Frontend Developer <br /><br />
-            Mobile Cross-Platform Developer <br /><br />
-            Mathematician <br /><br />
-          </p>
+          <ul class="dev-list">
+            <li>Frontend Developer</li>
+            <li>Mobile Cross-Platform Developer</li>
+            <li>Mathematician</li>
+          </ul>
         </div>
       </div>
     </div>
@@ -46,34 +45,120 @@
           </div>
           <div class="row-column-2">
             <p>
-              I am a highly motivated self-starter, my personal goal is: I try
-              to do my best every day on my projects, because with more effort
-              comes mutual improvement.<br /><br />
-              I am really dedicated to clean code and pixel-perfect UI. I strive
-              towards constant improvement and advancement of knowledge and
-              skills. I truly enjoy creating apps and it's my passion.
-              <br /><br />
-              My personal value is: ask important questions, speak honestly in a
-              culture of open exchange of ideas, innovation, and continuous
-              improvement.<br /><br />
-              With Mathematician analytics and logic skils I adapt quickly to
-              another language or development environment and enjoy learning new
-              technologies, tools, and platforms.
+              I am a highly motivated self-starter, my personal goal is: I try to do my best every day on my projects,
+              because with more effort comes mutual improvement.
+              <br />
+              <br />
+              I am really dedicated to clean code and pixel-perfect UI. I strive towards constant improvement and
+              advancement of knowledge and skills. I truly enjoy creating apps and it's my passion.
+              <br />
+              <br />
+              My personal value is: ask important questions, speak honestly in a culture of open exchange of ideas,
+              innovation, and continuous improvement.
+              <br />
+              <br />
+              With Mathematician analytics and logic skils I adapt quickly to another language or development
+              environment and enjoy learning new technologies, tools, and platforms.
               <br />
               <br />
               Enjoy and appreciate agile practices, and well organization.
-              <br /><br />
-              Additionally, I am a mother of three, a poem-writer in my spare
-              time, and a passionate enthusiast of philosophy and psychology.
+              <br />
+              <br />
+              Additionally, I am a mother of three, a poem-writer in my spare time, and a passionate enthusiast of
+              philosophy and psychology.
             </p>
-            <div id="tab-titles">
-              <p class="tab-links silver-text">Experance</p>
-              <p class="tab-links silver-text">Education</p>
-              <p class="tab-links silver-text">Skills</p>
+          </div>
+          <div id="background-img">
+            <div class="container">
+              <div class="tab-section">
+                <div id="tab-titles">
+                  <p class="tab-links silver-text" onclick="opentab('skills')">Skills</p>
+                  <p class="tab-links silver-text active-link" onclick="opentab('experance')">Experance</p>
+                  <p class="tab-links silver-text" onclick="opentab('education')">Education</p>
+                </div>
+
+                <div class="tab-contains active-tab" id="experance">
+                  <ul>
+                    <li>
+                      <span class="silver-text">Frontend Developer</span>
+                      <span class="job-company">Velocitech</span>
+                      <span class="job-dates">Nov 2023 - Jun 2024</span>
+                    </li>
+                    <li>
+                      <span class="silver-text">Mobile Application Developer</span>
+                      <span class="job-company">Goxee Dealer Software</span>
+                      <span class="job-dates">Mar 2023 - Oct 2023</span>
+                    </li>
+                    <li>
+                      <span class="silver-text">Flutter Developer</span>
+                      <span class="job-company">Credeo GmbH</span>
+                      <span class="job-dates">Sep 2022 - Mar 2023</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="tab-contains" id="education">
+                  <ul>
+                    <li>
+                      <span class="silver-text">Professor of Mathematics and Computer Science</span>
+                      <span class="degree">Master's Degree</span>
+                      <span class="school">University of Belgrade Faculty of Mathematics 2013</span>
+                    </li>
+                    <li>
+                      <span class="silver-text">Database Foundations,</span>
+                      <span class="degree">Oracle Academy</span>
+                      <span class="school">Oracle 2022</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="tab-contains" id="skills">
+                  <ul>
+                    <li>
+                      <span class="skill-group">JS / TS / HTML / CSS</span>
+                      <span class="skill-group">React</span>
+                      <span class="skill-group">React Native</span>
+                    </li>
+                    <li>
+                      <span class="skill-group">Flutter / Dart</span>
+                      <span class="skill-group">Java</span>
+                      <span class="skill-group">C / C++</span>
+                      <span class="skill-group">MySQL</span>
+                    </li>
+                    <li>
+                      <span class="skill-group">Clean Architecture</span>
+                      <span class="skill-group">Design Patterns</span>
+                      <span class="skill-group">Data Structures</span>
+                      <span class="skill-group">Algorithms</span>
+                      <span class="skill-group">RESTful APIs</span>
+                    </li>
+                    <li>
+                      <span class="skill-group">GIT</span>
+                      <span class="skill-group">CI/CD</span>
+                      <span class="skill-group">Figma</span>
+                      <span class="skill-group">JIRA</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+
+    <script>
+      var tablinks = document.getElementsByClassName('tab-links');
+      var tabcontents = document.getElementsByClassName('tab-contains');
+
+      function opentab(tabname) {
+        for (let i = 0; i < tablinks.length; i++) {
+          tablinks[i].classList.remove('active-link');
+        }
+        for (let i = 0; i < tabcontents.length; i++) {
+          tabcontents[i].classList.remove('active-tab');
+        }
+        event.currentTarget.classList.add('active-link');
+        document.getElementById(tabname).classList.add('active-tab');
+      }
+    </script>
   </body>
 </html>
