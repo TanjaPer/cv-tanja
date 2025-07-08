@@ -247,3 +247,62 @@ nav ul li a:hover::after {
   color: #bbb8b8;
   display: block;
 }
+/* ----------- mobile version -------- */
+@media (max-width: 768px) {
+  body {
+    padding: 0 5%;
+  }
+
+  nav {
+    flex-direction: column;
+    height: auto;
+    justify-content: center;
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    margin-top: 10px;
+  }
+
+  nav ul li {
+    margin: 5px 0;
+  }
+
+  .logo {
+    width: 100px;
+    height: auto;
+    margin-bottom: 10px;
+  }
+
+  #header {
+    padding-top: 20px;
+    height: auto;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+  }
+
+  #header-text {
+    margin: 10% 0;
+    padding: 0;
+    text-align: center;
+  }
+
+  #header-text h1 {
+    font-size: clamp(24px, 5vw, 36px);
+    margin-top: 30px;
+  }
+
+  #header-text p {
+    font-size: 18px;
+    margin: 20px 0;
+  }
+
+  .dev-list li {
+    font-size: 16px;
+    text-align: center;
+  }
+}
