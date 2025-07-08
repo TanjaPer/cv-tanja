@@ -24,7 +24,7 @@ body {
   font-weight: bold;
   line-height: 1.2;
   margin-bottom: 5px;
-  margin-top: 20%;
+  margin-top: 15%;
 }
 
 .dev-list {
@@ -101,7 +101,7 @@ nav ul li a:hover::after {
 }
 
 .silver-text {
-  background: linear-gradient(180deg, #080808 0%, #ece3e3 90%, #080808 100%);
+  background: linear-gradient(10deg, #11c6c0 0%, #ece3e3 90%, #075b58 100%);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
@@ -133,7 +133,7 @@ nav ul li a:hover::after {
   flex-basis: 20px;
 }
 .sub-title {
-  color: white;
+  color: rgb(209, 207, 207);
   margin-bottom: 10px;
   margin-left: 10px;
   font-weight: 600;
@@ -181,7 +181,7 @@ nav ul li a:hover::after {
   margin: 0 13% 7%;
   padding: 0 40px;
 }
-
+/* ----------- tab experance ------ */
 .tab-links {
   display: inline-block;
   margin-top: 10%;
@@ -216,7 +216,7 @@ nav ul li a:hover::after {
   width: fit-content;
 }
 .tab-contains ul li span {
-  color: #3a3939;
+  color: #bbb8b8;
   font-size: 19px;
 }
 .tab-contains {
@@ -236,7 +236,7 @@ nav ul li a:hover::after {
 .degree,
 .skill-group {
   font-size: 16px;
-  color: #484646;
+  color: #bbb8b8;
   display: block;
   margin-bottom: 2px;
 }
@@ -244,6 +244,6 @@ nav ul li a:hover::after {
 .job-dates,
 .school {
   font-size: 15px;
-  color: #484646;
+  color: #bbb8b8;
   display: block;
 }
