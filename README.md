@@ -1,4 +1,4 @@
-# CV Tanja
+# CV - Tanja Pervan
 
 My online CV (Front-end developer):
 
